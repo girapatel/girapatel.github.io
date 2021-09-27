@@ -38,20 +38,20 @@
 }
 
 :root {
-  --magenta: #E875F0;  
+  --magenta: #D891FC;  
   --blue: #6B84FF;  
   --heading-color: #EBE9E7;  
   --text-color: #C3C3C9;
-  --bg-color: #091A29;
-  --gradient-color: #0F2035;
+  --bg-color: #001D23;
+  --gradient-color: #07262D;
   --notjira-color: #4E536A;
   --slider-color: #6A7089;
 }
 
 [data-theme="light"] {  
-  --magenta: #C530C0;  
+  --magenta: #b446c8;  
   --blue: #3c55e0;  
-  --heading-color: #163050;  
+  --heading-color: #001D23;  
   --text-color: #4E536A;
   --bg-color: #FCF8F6;
   --gradient-color: #fff;
@@ -63,9 +63,12 @@ html {
   min-height: 100%;
 }
 body {
+  /*border:6px solid;
+  border-image: linear-gradient(60deg, rgb(211,153,237), rgb(157,157,243)) 1;*/
   height: 100%;
   max-width: 1440px;
   position: relative;
+  
 }
 html,
 body {
@@ -76,10 +79,14 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   background-color: var(--bg-color);
+  
 }
 .content {
   margin: 4em 8em;
   position: relative;
+  border: 4px solid;
+  border-image: linear-gradient(60deg, #9d9df3, #d399ed);
+  border-image-slice: 1;
 }
 .content:after {
   clear: both;
@@ -289,7 +296,7 @@ dfn::before {
   right: 0%;
   bottom: 5%;
   text-align: center;
-  color: #E875F0;
+  color: #D891FC;
 }
 
 a > h3 {color: var(--magenta);}
@@ -317,10 +324,10 @@ button {
 }
 
 hr {border: 0;
-    width: 5%;
+    width: 10%;
     height: 2px;
     background: var(--bg-color);
-    background-image: linear-gradient(to right, var(--notjira-color), var(--notjira-color));
+    background-image: linear-gradient(to right, rgb(211,153,237), rgb(157,157,243));
     margin: unset;
 }
 
@@ -401,14 +408,12 @@ ul,li {
 
 .about-pic {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  border-radius: 50em;
-  background: url(/img/me1.jpg) no-repeat;
+  border-radius: 3px;
+  height: 450px;
 }
 
 .about-pic:hover {
-  background: url(/img/me2.jpg) no-repeat;
+  filter: invert(1);
 }
 
 footer {
@@ -468,14 +473,14 @@ footer {
   .margin-left {margin: 1.6em;}
   .margin-tight {margin: 5em 0;}
   .margin-right {margin: 0 1em;}
-  h1 span,h1,p span,a h2,li {text-align: center;display: block;}
+  h1 span,p span,a h2 {text-align: center;display: block;}
   .about-parent {flex-direction: column;}
 }
 @media screen and (max-width: 553px) {
   .col-2,.col-3,.col-2-desc {grid-template-columns: repeat(1, 1fr);}
   .col-2-desc {gap: 1em;}
   h1 span {font-size: 1.15em; line-height: 1.5;}
-  h1,.nav-logo {font-size: 2em;}
+  h1,.nav-logo {font-size: 1.6em;}
   h2,.nav-link-item,button {font-size: 1em;}  
 }
 

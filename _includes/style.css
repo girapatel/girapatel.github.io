@@ -46,8 +46,8 @@ html {
   min-height: 100%;
 }
 body {
-  border:6px solid;
-  border-image: linear-gradient(60deg, rgb(211,153,237), rgb(157,157,243)) 1;
+  /*border:6px solid;
+  border-image: linear-gradient(60deg, rgb(211,153,237), rgb(157,157,243)) 1;*/
   height: 100%;
   max-width: 1440px;
   position: relative;
@@ -310,7 +310,7 @@ hr {border: 0;
     width: 10%;
     height: 2px;
     background: var(--bg-color);
-    background-image: linear-gradient(to right, var(--notjira-color), var(--notjira-color));
+    background-image: linear-gradient(to right, rgb(211,153,237), rgb(157,157,243));
     margin: unset;
 }
 
@@ -463,7 +463,7 @@ footer {
   .col-2,.col-3,.col-2-desc {grid-template-columns: repeat(1, 1fr);}
   .col-2-desc {gap: 1em;}
   h1 span {font-size: 1.15em; line-height: 1.5;}
-  h1,.nav-logo {font-size: 2em;}
+  h1,.nav-logo {font-size: 1.6em;}
   h2,.nav-link-item,button {font-size: 1em;}  
 }
 
