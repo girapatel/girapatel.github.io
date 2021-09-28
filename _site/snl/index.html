@@ -329,6 +329,7 @@ hr {border: 0;
     background: var(--bg-color);
     background-image: linear-gradient(to right, rgb(211,153,237), rgb(157,157,243));
     margin: unset;
+    margin-bottom: 2em;
 }
 
 ul,li {
@@ -406,6 +407,10 @@ ul,li {
   background-attachment: fixed;
 }
 
+.overlay {
+  opacity: 0;
+}
+
 .about-pic {
   display: inline-block;
   border-radius: 3px;
@@ -413,7 +418,20 @@ ul,li {
 }
 
 .about-pic:hover {
-  filter: invert(1);
+  filter: invert(1) hue-rotate(260deg);
+}
+
+.about-pic:hover + div {
+  opacity: 1;
+}
+
+.lol {
+  font-weight: 700;
+  text-align: right;
+  position:relative;
+  margin-top: -6em;
+  padding-right: 2em;
+  color: #fff;
 }
 
 footer {

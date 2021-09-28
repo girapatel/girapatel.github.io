@@ -329,6 +329,7 @@ hr {border: 0;
     background: var(--bg-color);
     background-image: linear-gradient(to right, rgb(211,153,237), rgb(157,157,243));
     margin: unset;
+    margin-bottom: 2em;
 }
 
 ul,li {
@@ -406,6 +407,10 @@ ul,li {
   background-attachment: fixed;
 }
 
+.overlay {
+  opacity: 0;
+}
+
 .about-pic {
   display: inline-block;
   border-radius: 3px;
@@ -413,7 +418,20 @@ ul,li {
 }
 
 .about-pic:hover {
-  filter: invert(1);
+  filter: invert(1) hue-rotate(260deg);
+}
+
+.about-pic:hover + div {
+  opacity: 1;
+}
+
+.lol {
+  font-weight: 700;
+  text-align: right;
+  position:relative;
+  margin-top: -6em;
+  padding-right: 2em;
+  color: #fff;
 }
 
 footer {
@@ -516,7 +534,7 @@ footer {
 <main class="about-parent">
     <div class="col about">
         <div class="gradient-box">
-        <p style="display:inline;">gira  &bull; [ geer-ah ] &bull; she/her</p>
+        <p style="display:inline;">gira  &bull; [ geer-ah ]    <a href="javascript:playSound('pronounciation');"><img src="../img/pronounciation.svg" style="width: 20px;margin-bottom: -5px;" alt="name pronounciation" /></a><audio id="pronounciation"  src="../img/pronounciation.mp3" preload="auto"></audio>  &bull; she/her</p>
         <h1>I'm a visual designer 👁 that focuses on brand and identity design 🎨 in the entertainment industry. I'm currently working at Spotify ✨ creating toolkits and experimental content for social.</h1><hr>
         <p>I rewrite this every few months because I worry it makes me sound like a robot. I swear I'm just a human who's trying their best. I don't take myself too seriously, am constantly learning new tools, and love mixing work and play.</p>
     </div>
@@ -524,10 +542,18 @@ footer {
         <p>Video games, live music, birds, synth pop, sci-fi, and front-end development. Big fan of scouring Reddit threads after watching a good show or movie 🤓 Unfortunately, very active on <a href="https://twitter.com/GiraNotJira" onclick="window.open(this.href); return false;">the bird app</a>, mostly to talk about birds.</p></div>
     </div>
     <div class="col sidebar">
-        <img class="about-pic" src="../img/me-new.jpg" alt="me" />
+        <img class="about-pic" src="../img/me.jpg" alt="me" />
+        <div class="overlay">
+            <p class="lol">spoopy 👻</p>
+        </div>
     </div>
 </main>
 
+
+<script>function playSound(animal) {
+    document.getElementById(animal).play();
+  };
+  </script>
 
 <!--
 <section>
