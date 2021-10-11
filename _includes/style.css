@@ -401,7 +401,7 @@ ul,li {
 }
 
 .about-pic:hover {
-  filter: invert(1) hue-rotate(260deg);
+  filter: invert(1) hue-rotate(-155deg);
 }
 
 .about-pic:hover + div {
@@ -410,11 +410,10 @@ ul,li {
 
 .lol {
   font-weight: 700;
-  text-align: right;
+  text-align: center;
   position:relative;
   margin-top: -6em;
-  padding-right: 2em;
-  color: #fff;
+  color: #b446c8;
 }
 
 footer {
