@@ -312,8 +312,7 @@ hr {border: 0;
     background: var(--bg-color);
     background-image: linear-gradient(to right, rgb(227,113,251), rgb(157,157,243));
     margin: unset;
-    margin-bottom: 2.5em;
-    margin-top: 2.5em;
+    margin-bottom: 2em;
 }
 
 ul,li {
