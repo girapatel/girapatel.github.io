@@ -38,12 +38,12 @@
 }
 
 :root {
-  --magenta: #D891FC;  
+  --magenta: #E371FB;  
   --blue: #6B84FF;  
   --heading-color: #EBE9E7;  
   --text-color: #C3C3C9;
-  --bg-color: #001D23;
-  --gradient-color: #07262D;
+  --bg-color: #101427;
+  --gradient-color: #182034;
   --notjira-color: #4E536A;
   --slider-color: #6A7089;
 }
@@ -51,7 +51,7 @@
 [data-theme="light"] {  
   --magenta: #b446c8;  
   --blue: #3c55e0;  
-  --heading-color: #001D23;  
+  --heading-color: #101427;  
   --text-color: #4E536A;
   --bg-color: #FCF8F6;
   --gradient-color: #fff;
@@ -68,7 +68,6 @@ body {
   height: 100%;
   max-width: 1440px;
   position: relative;
-  
 }
 html,
 body {
@@ -117,7 +116,7 @@ a:visited {
   font-weight: bold;
   color: var(--heading-color);
   text-transform: lowercase;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 .p span,p span,.h3,h3 {
   font-weight: 500;
@@ -253,20 +252,15 @@ dfn::before {
   transition: opacity 250ms, top 250ms;
 }
 
-.nav-link-item, button {
-  font-family: Gira Sans, Helvetica Neue, Roboto, Arial, sans-serif;
-  font-size: 1.25em;
-  font-weight: 700;
-  text-transform: lowercase;
-}
+
 .margin-med {margin: 8em 0;}
 .margin-top {margin: 4em 0 0;}
 .margin-tight {
     margin: 5em 12em;
     text-align: center;
 }
-.margin-right {margin-right: 2em;}
-.margin-left {margin-left: 2em;}
+.margin-right {margin-right: 4em;}
+.margin-left {margin-left: 4em;}
 
 .card {
   position: relative;
@@ -296,7 +290,7 @@ dfn::before {
   right: 0%;
   bottom: 5%;
   text-align: center;
-  color: #D891FC;
+  color: #E371FB;
 }
 
 a > h3 {color: var(--magenta);}
@@ -324,12 +318,13 @@ button {
 }
 
 hr {border: 0;
-    width: 10%;
-    height: 2px;
+    width: 100%;
+    height: .5px;
     background: var(--bg-color);
-    background-image: linear-gradient(to right, rgb(211,153,237), rgb(157,157,243));
+    background-image: linear-gradient(to right, rgb(227,113,251), rgb(157,157,243));
     margin: unset;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+    margin-top: 2.5em;
 }
 
 ul,li {
@@ -418,7 +413,7 @@ ul,li {
 }
 
 .about-pic:hover {
-  filter: invert(1) hue-rotate(260deg);
+  filter: invert(1) hue-rotate(-155deg);
 }
 
 .about-pic:hover + div {
@@ -427,11 +422,10 @@ ul,li {
 
 .lol {
   font-weight: 700;
-  text-align: right;
+  text-align: center;
   position:relative;
   margin-top: -6em;
-  padding-right: 2em;
-  color: #fff;
+  color: #b446c8;
 }
 
 footer {
@@ -499,7 +493,7 @@ footer {
   .col-2-desc {gap: 1em;}
   h1 span {font-size: 1.15em; line-height: 1.5;}
   h1,.nav-logo {font-size: 1.6em;}
-  h2,.nav-link-item,button {font-size: 1em;}  
+  h2 {font-size: 1em;}   
 }
 
 @media screen and (max-width: 375px) {
@@ -517,8 +511,9 @@ footer {
  <!--logo and links-->    
 <div class="nav-align">
     <a class="nav-logo"  class="active" href="/"><dfn data-info="Not Jira.">Gira.</dfn></a>
-    <a class="nav-link-item margin-left"  class="active" href="/">Work</a>
-    <a class="nav-link-item margin-left"   href="../about">About</a>
+    <a class="nav-link-item h3 margin-left"  class="active" href="/">Work</a>
+    <a class="nav-link-item h3 margin-left" target="_blank" rel="noopener noreferrer"  class="active" href="https://www.facebook.com/sparkarhub/portfolios/ig/gooweee/" >AR Filters</a>
+    <a class="nav-link-item h3 margin-left"   href="../about">About</a>
   </div>
 <div class="nav-align"><label class="theme-switch" for="checkbox" aria-label="Dark Mode" title="Dark Mode">
   <input type="checkbox" id="checkbox">
@@ -578,13 +573,13 @@ footer {
 
     <!--FOOTER-->  
 <footer class="nav">
-<div class="nav-align">
+<div class="h3 nav-align">
     <a href="https://www.linkedin.com/in/girapatel2" class="margin-right" onclick="window.open(this.href); return false;">Linkedin</a>
     <a href="https://vimeo.com/girapatel" class="margin-right" onclick="window.open(this.href); return false;">Vimeo</a>
     <a href="https://dribbble.com/girapatel" class="margin-right" onclick="window.open(this.href); return false;">Dribbble</a>
     <a href="https://open.spotify.com/user/1240949043?si=7kL2K3iKSvmDbI_B1DU4mA" class="margin-right" onclick="window.open(this.href); return false;">Spotify</a>
     </div>
-    <p class="nav-align">Made with my 🐻 hands &copy; Gira Patel 2021 </p>
+    <p class="h3 nav-align">Made with my 🐻 hands &copy; Gira Patel 2022 </p>
 </footer>
 
     </div>
