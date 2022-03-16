@@ -146,6 +146,10 @@ h1 span {
 .nav-link-item {
   height: 1.4em;
   margin-left: 2em;
+  font-weight: 500;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .theme-switch {
