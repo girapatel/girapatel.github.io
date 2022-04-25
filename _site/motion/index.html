@@ -39,11 +39,10 @@
 
 :root {
   --magenta: #E371FB;  
-  --blue: #6B84FF;  
-  --heading-color: #EBE9E7;  
-  --text-color: #C3C3C9;
-  --bg-color: #101427;
-  --gradient-color: #182034;
+  --blue: #127cde;  
+  --heading-color: #fef4eb;  
+  --text-color: #dbd0c6;
+  --bg-color: #0f1012;
   --notjira-color: #4E536A;
   --slider-color: #6A7089;
 }
@@ -51,20 +50,24 @@
 [data-theme="light"] {  
   --magenta: #b446c8;  
   --blue: #3c55e0;  
-  --heading-color: #101427;  
-  --text-color: #4E536A;
-  --bg-color: #FCF8F6;
-  --gradient-color: #fff;
+  --heading-color: #0f1012;  
+  --text-color: #202327;
+  --bg-color: #fef4eb;
   --notjira-color: #B6B6C8;
   --slider-color: #fff;
 }
 
 html {
   min-height: 100%;
+  border: 2px solid;
+  --bg-color: #0f1012;
+  border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
+  );
+  border-image-slice: 1;
+
 }
+
 body {
-  /*border:6px solid;
-  border-image: linear-gradient(60deg, rgb(211,153,237), rgb(157,157,243)) 1;*/
   height: 100%;
   max-width: 1440px;
   position: relative;
@@ -83,9 +86,6 @@ body {
 .content {
   margin: 4em 8em;
   position: relative;
-  border: 4px solid;
-  border-image: linear-gradient(60deg, #9d9df3, #d399ed);
-  border-image-slice: 1;
 }
 .content:after {
   clear: both;
@@ -255,7 +255,22 @@ dfn::before {
   height: 0;
   transition: opacity 250ms, top 250ms;
 }
-
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: var(--blue);
+  color: #fef4eb;
+  font-size: .8em;
+  border-radius: 3px;
+  padding: 5px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;}
 
 .margin-med {margin: 8em 0;}
 .margin-top {margin: 4em 0 0;}
@@ -323,11 +338,11 @@ button {
 
 hr {border: 0;
     width: 100%;
-    height: .5px;
+    height: 2px;
     background: var(--bg-color);
-    background-image: linear-gradient(to right, rgb(227,113,251), rgb(157,157,243));
+    background-image: linear-gradient(#E371FB,#016ed3);
     margin: unset;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     margin-top: 2.5em;
 }
 
@@ -366,15 +381,19 @@ ul,li {
   display: grid;
   grid-template-columns: repeat(1,3fr 1fr);
   gap: 8em;
-  background: linear-gradient(to bottom, var(--gradient-color), var(--bg-color));
-  padding: 0 2em;
+  padding: 1em 2em;
   border-radius: 3px;
+  border: 2px solid;
+  border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
+  border-image-slice: 1;
 }
 
 .gradient-box {
   padding: 2em 2.5em;
   margin-bottom: 1em;
-  border-radius: 3px;
+  border: 2px solid;
+  border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
+  border-image-slice: 1;
 }
 
 @keyframes fadein {
@@ -399,11 +418,6 @@ ul,li {
   display: flex;
   flex-direction: column;
   flex: 3;
-}
-
-.about div {
-  background-image: linear-gradient(to bottom, var(--gradient-color), var(--bg-color));
-  background-attachment: fixed;
 }
 
 .overlay {
@@ -451,6 +465,9 @@ footer {
     }
     dfn:hover::before {
         top: 20px;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
     }
     a:hover {
         color: var(--blue);
@@ -533,11 +550,11 @@ footer {
 <section class="col-2-desc">
     <div>
         <h2>Overview</h2>
-        <p>This is mostly experimental work. I love playing around with motion, and 3D is my new obsession. There is more video and animation work on <a href="https://vimeo.com/girapatel" onclick="window.open(this.href); return false;">Vimeo</a>.</p>
+        <p>This is mostly experimental work. I love playing around with motion and I take a lot of inspiration from my favorite TV shows. There is more video and animation work on <a href="https://vimeo.com/girapatel" onclick="window.open(this.href); return false;">Vimeo</a>.</p>
     </div>
     <div>
     <h2>Tools Used</h2>
-    <p>After Effects, Cinema 4D, Photoshop, Illustrator, Principle</p>
+    <p>After Effects, Photoshop, Illustrator, Principle</p>
     </div>
 </section>
 
@@ -545,10 +562,6 @@ footer {
 <!--MAIN GRID-->
 <main>
 <div class="card col-2">
-    <div class="item"><video autoplay loop muted playsinline src="../../img/motion-spin.mp4" alt="3D spinning rings"></video></div>
-    <div class="item"><video autoplay loop muted playsinline src="../../img/motion-squish.mp4" alt="3D blobs colliding"></video></div>
-    <div class="item"><video autoplay loop muted playsinline src="../../img/motion-fall.mp4" alt="3D gem falling down an infinite staircase"></video></div>
-    <div class="item"><video autoplay loop muted playsinline src="../../img/motion-fuck2020.mp4" alt="looping circle that says fuck 2020"></video></div>
     <div class="item"><video autoplay loop muted playsinline src="../../img/motion-majestic.mp4" alt="Smokey text"></video></div>
     <div class="item"><video autoplay loop muted playsinline src="../../img/motion-casual.mp4" alt="Text repetition"></video></div>
     <div class="item"><video autoplay loop muted playsinline src="../../img/motion-stylus.mp4" alt="Stylus Web Redesign"></video></div>
@@ -564,7 +577,7 @@ footer {
 
 <section class="spacer">
     <a href="/illustration/" id="previous" class="left"><p>&larr; Previous</p></a>
-    <a href="/a-little-late/" id="next" class="right"><p>Next &rarr;</p></a>
+    <a href="/3d/" id="next" class="right"><p>Next &rarr;</p></a>
 </section>
     
   <div class="spacer"></div>
