@@ -307,6 +307,38 @@ a:hover > h3 {color: var(--blue);}
   transform: translateX(-50%)
 }
 
+/*MASKS*/
+.mask-sc {
+  -webkit-mask-image: url(img/masks/mask-semicircle.svg);
+  mask-image: url(img/masks/mask-semicircle.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+}
+.mask-sc-invert {
+  -webkit-mask-image: url(img/masks/mask-sc-invert.svg);
+  mask-image: url(img/masks/mask-sc-invert.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+}
+.mask-rr {
+  -webkit-mask-image: url(img/masks/mask-roundrect.svg);
+  mask-image: url(img/masks/mask-roundrect.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+}
+.mask-rr-invert {
+  -webkit-mask-image: url(img/masks/mask-rr-invert.svg);
+  mask-image: url(img/masks/mask-rr-invert.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+}
+.mask-p {
+  -webkit-mask-image: url(img/masks/mask-poly.svg);
+  mask-image: url(img/masks/mask-poly.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+}
+
 .item img,.item video {width: 100%; display: block; border-radius: 3px;}
 
 .button-margin {margin: 1em 0 2.5em;}
@@ -343,7 +375,7 @@ ul,li {
 .col-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25em;
+  gap: 4em;
   margin-top: 4em;
 }
 .col-2 {
