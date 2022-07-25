@@ -302,27 +302,8 @@ dfn::before {
   border-radius: 3px;
 }
 
-.card-title {
-  position: absolute;
-  left: 0%;
-  top: auto;
-  right: 0%;
-  bottom: 5%;
-  text-align: center;
-  color: #E371FB;
-}
-
 a > h3 {color: var(--magenta);}
 a:hover > h3 {color: var(--blue);}
-
-.card-logo {
-  position: absolute;
-  height: 12%;
-  left: 50%;
-  bottom: 15%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
-}
 
 /*MASKS*/
 .mask-sc {
@@ -504,7 +485,6 @@ footer {
     a:hover {
         color: var(--blue);
     }
-
     button:hover {
         text-decoration: none;
         background: var(--blue);
@@ -523,7 +503,6 @@ footer {
   .content {margin: 2em 2em;}
   .col-1,.col-2,.col-3 {margin-top: 2em;}
   .col-2-desc {gap: 3em;}
-  .card-logo {bottom: 20%;}
   .about-parent {flex-direction: column; align-items: center;}
   .sidebar {text-align: center;}
 }
@@ -584,9 +563,9 @@ footer {
 
 <!--MAIN GRID-->
 <main class="card col-3">
-    <div class="card-image mask-rr"><!--<a href="/#/">-->
+    <div class="card-image mask-rr"><a href="/#/">
             <img src="../../img/card_spotify.jpg" class="image" loading="lazy" alt="Spotify, page under construction"/>
-            <!--</a>-->
+            </a>
     </div>
     <div class="card-image mask-sc"><a href="/motion/">
         <video autoplay loop muted playsinline src="../../img/card_motion.mp4" class="image" alt="Motion Design"></video>
