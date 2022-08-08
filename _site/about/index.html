@@ -435,16 +435,18 @@ ul,li {
 
 .overlay {
   opacity: 0;
+  margin: -7em 5em 0;
 }
 
 .about-pic {
   display: inline-block;
   border-radius: 3px;
   height: 450px;
+  content: url(../img/me.jpg);
 }
 
 .about-pic:hover {
-  filter: invert(1) hue-rotate(-155deg);
+  content: url(../img/me2.jpg);
 }
 
 .about-pic:hover + div {
@@ -452,11 +454,9 @@ ul,li {
 }
 
 .lol {
-  font-weight: 700;
   text-align: center;
   position:relative;
-  margin-top: -6em;
-  color: #b446c8;
+  color: #fef4eb;
 }
 
 footer {
@@ -569,9 +569,9 @@ footer {
             <p>Video games, live music, birds, synth pop, sci-fi, and front-end development. Big fan of scouring Reddit threads after watching a good show or movie 🤓 Unfortunately, very active on <a href="https://twitter.com/gooweee" onclick="window.open(this.href); return false;">that bird app</a>, mostly to talk about birds.</p></div></div>
     </div>
     <div class="col sidebar">
-        <img class="about-pic" src="../img/me.jpg" alt="me" />
+        <div class="about-pic" alt="me"></div>
         <div class="overlay">
-            <p class="lol">lol 🤪</p>
+            <p class="lol">pink tube light + laptop + lots of photoshop 🤪</p>
         </div>
     </div>
 </main>

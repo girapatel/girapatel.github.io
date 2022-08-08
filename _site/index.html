@@ -435,16 +435,18 @@ ul,li {
 
 .overlay {
   opacity: 0;
+  margin: -7em 5em 0;
 }
 
 .about-pic {
   display: inline-block;
   border-radius: 3px;
   height: 450px;
+  content: url(../img/me.jpg);
 }
 
 .about-pic:hover {
-  filter: invert(1) hue-rotate(-155deg);
+  content: url(../img/me2.jpg);
 }
 
 .about-pic:hover + div {
@@ -452,11 +454,9 @@ ul,li {
 }
 
 .lol {
-  font-weight: 700;
   text-align: center;
   position:relative;
-  margin-top: -6em;
-  color: #b446c8;
+  color: #fef4eb;
 }
 
 footer {
