@@ -42,7 +42,7 @@
 
 html {
   min-height: 100%;
-  border: 2px solid;
+  border: 1px solid;
   --bg-color: #0f1012;
   border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
   );
@@ -117,7 +117,8 @@ h1 span {
 .h2,h2 {
   font-size: 1.25em;
 }
-.p span,p span {
+
+p {
   font-size: 0.75em;
 }
 .h3,h3 {
@@ -244,16 +245,14 @@ dfn::before {
 }
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 100%;
+  width: 82%;
   background-color: var(--blue);
-  color: #fef4eb;
-  font-size: .8em;
-  border-radius: 3px;
-  padding: 5px;
-  /* Position the tooltip */
+  color: #ffffff;
+  font-size: .75em;
   position: absolute;
   z-index: 1;
-  top: 100%;}
+  top: 100%;
+  padding: .75em;}
 
 .margin-med {margin: 8em 0;}
 .margin-top {margin: 4em 0 0;}
@@ -334,12 +333,13 @@ button {
 
 hr {border: 0;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: var(--bg-color);
-    background-image: linear-gradient(270deg, #E371FB,#016ed3);
+    background-image: linear-gradient(90deg, #E371FB,#016ed3);
     margin: unset;
-    margin-bottom: 5em;
-    margin-top: 2.5em;
+    margin: 1em 0;
+}
+hr.reverse {background-image: linear-gradient(270deg, #E371FB,#016ed3);
 }
 
 ul,li {
@@ -364,6 +364,7 @@ ul,li {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25em;
   margin-top: 4em;
+  grid-auto-rows: minmax(min-content, max-content);
 }
 
 .col-1 {
@@ -375,19 +376,19 @@ ul,li {
 
 .col-2-desc {
   display: grid;
-  grid-template-columns: repeat(1,3fr 1fr);
+  grid-template-columns: repeat(1,2fr 1fr);
   gap: 8em;
   padding: 1em 2em;
-  border-radius: 3px;
+  /* border-radius: 3px;
   border: 2px solid;
   border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
-  border-image-slice: 1;
+  border-image-slice: 1;*/
 }
 
 .gradient-box {
   padding: 2em 2.5em;
   margin-bottom: 1em;
-  border: 2px solid;
+  border: 1px solid;
   border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
   border-image-slice: 1;
 }
