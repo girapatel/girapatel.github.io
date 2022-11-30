@@ -62,7 +62,6 @@ html {
   border: 1px solid;
   --bg-color: #0f1012;
   border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
-  );
   border-image-slice: 1;
 
 }
@@ -84,7 +83,7 @@ body {
   
 }
 .content {
-  margin: 4em 8em;
+  margin: 4em 5em;
   position: relative;
 }
 .content:after {
@@ -373,7 +372,7 @@ ul,li {
 .col-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4em;
+  gap: 3em;
   margin-top: 4em;
 }
 .col-2 {
@@ -587,7 +586,7 @@ footer {
 </main>
 
 <section class="spacer">
-    <a href="/a-little-late/" id="previous" class="left"><p>&larr; Previous</p></a>
+    <a href="/stories/" id="previous" class="left"><p>&larr; Previous</p></a>
     <a href="/a-little-late-2/" id="next" class="right"><p>Next &rarr;</p></a>
 </section>
     
@@ -637,8 +636,7 @@ if (currentTheme) {
   if (currentTheme === 'light') {
     toggleSwitch.checked = true
   }
-}
-</script>
+}</script>
     <script>const animatedTags = document.querySelectorAll("h1, p span, .card, div.item img, div.item video")
 
 //fade out on load
