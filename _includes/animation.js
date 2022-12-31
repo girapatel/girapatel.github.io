@@ -32,3 +32,4 @@ document.addEventListener("scroll", function() {
 window.addEventListener("resize",function() {
   fadeIn()
 })
+

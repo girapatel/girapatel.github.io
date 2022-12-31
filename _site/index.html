@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="I'm a visual designer that's passionate about art direction, brand identity, and the entertainment industry. Other interests include 3D, motion graphics, music, gaming, and tech.">
-    <meta name="keywords" content="gira patel, gira, brand designer, graphic designer, digital designer, visual designer, digital designer new york, visual designer new york, social marketing designer, entertainment">
+    <meta name="description" content="Graphic designer with a focus in art direction, brand identity, and AR. Always experimenting and open to collaborations with passionate people.">
+    <meta name="keywords" content="gira patel, gira, brand designer, graphic designer, digital designer, visual designer, digital designer new york, visual designer new york, social marketing designer, art director, ar creator, instagram filters">
     <meta name="theme-color" content="var(--bg-color)"/>
     <title>Gira Patel | Portfolio</title>
     <meta property="og:url" content="http://localhost:4000" />
@@ -12,7 +12,7 @@
     <meta property="og:image" content="http://girapatel.co/img/share-thumb.jpg" />
     <meta property="twitter:image" content="http://girapatel.co/img/share-thumb.jpg" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:description" content="I'm a visual designer that's passionate about art direction, brand identity, and the entertainment industry. Other interests include 3D, motion graphics, music, gaming, and tech." />
+    <meta property="twitter:description" content="Graphic designer with a focus in art direction, brand identity, and AR. Always experimenting and open to collaborations with passionate people." />
     <meta property="twitter:creator" content="@GiraNotJira" />
     <link href="../img/favicon.ico" rel="icon" type="image/bmp">
     <style>@font-face {
@@ -47,7 +47,7 @@
   --slider-color: #6A7089;
 }
 
-[data-theme="light"] {  
+/*[data-theme="light"] {  
   --magenta: #b446c8;  
   --blue: #3c55e0;  
   --heading-color: #0f1012;  
@@ -55,7 +55,7 @@
   --bg-color: #fef4eb;
   --notjira-color: #B6B6C8;
   --slider-color: #fff;
-}
+}*/
 
 html {
   min-height: 100%;
@@ -80,10 +80,9 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   background-color: var(--bg-color);
-  
 }
 .content {
-  margin: 4em 5em;
+  margin: 4em 8em;
   position: relative;
 }
 .content:after {
@@ -91,6 +90,14 @@ body {
   content: ' ';
   display: block;
 }
+canvas {
+	position: absolute;
+	opacity: 0.03;
+	z-index: 0;
+	pointer-events: none;
+	user-select: none;
+}
+
 .align-center {text-align: center;}
 .left {float: left;}
 .right {float: right;}
@@ -123,10 +130,12 @@ a:visited {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-h1 span {
-  font-size: 1.4em;
+
+span.h1 {
+  font-size: 5.5em;
   line-height: 1;
 }
+
 .h1,h1 {
   font-size: 2.5em;
 }
@@ -140,6 +149,46 @@ p {
 .h3,h3 {
   font-size: 0.75em;
 }
+
+/*glitch text*/
+.glitch{
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-content:center;
+	height:100%;
+	width:100%;
+
+}
+
+.glitch .text{
+  position:relative;
+	padding:0;
+	margin:0;
+}
+
+.glitch span{
+  position: absolute;
+
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:100vw;
+}
+
+.glitch span:nth-child(2){
+	color:var(--magenta);
+  margin-left:1.5px;
+	margin-top:-1.5px;
+  -webkit-filter: blur(.5px);
+}
+.glitch span:nth-child(3){
+	color:var(--blue);
+  margin-left:-1.5px;
+	margin-top:1.5px;
+  -webkit-filter: blur(.5px);
+}
+
 
 .nav {
   display: flex;
@@ -168,7 +217,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
+/*
 .theme-switch {
   position: relative;
   display: inline-block;
@@ -227,6 +276,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+*/
 
 dfn {
   font-style: normal;
@@ -270,7 +320,7 @@ dfn::before {
   top: 100%;
   padding: .75em;}
 
-.margin-med {margin: 8em 0;}
+.margin-med {margin: 13em 0;}
 .margin-top {margin: 4em 0 0;}
 .margin-tight {
     margin: 5em 12em;
@@ -305,32 +355,32 @@ a:hover > h3 {color: var(--blue);}
 
 /*MASKS*/
 .mask-sc {
-  -webkit-mask-image: url(img/masks/mask-semicircle.svg);
-  mask-image: url(img/masks/mask-semicircle.svg);
+  -webkit-mask-image: url(img/masks/mask-sc.svg);
+  mask-image: url(img/masks/mask-sc.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
-.mask-sc-invert {
-  -webkit-mask-image: url(img/masks/mask-sc-invert.svg);
-  mask-image: url(img/masks/mask-sc-invert.svg);
+.mask-left-sc {
+  -webkit-mask-image: url(img/masks/mask-left-sc.svg);
+  mask-image: url(img/masks/mask-left-sc.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;  
+}
+.mask-right-sc {
+  -webkit-mask-image: url(img/masks/mask-right-sc.svg);
+  mask-image: url(img/masks/mask-right-sc.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
 .mask-rr {
-  -webkit-mask-image: url(img/masks/mask-roundrect.svg);
-  mask-image: url(img/masks/mask-roundrect.svg);
+  -webkit-mask-image: url(img/masks/mask-rr.svg);
+  mask-image: url(img/masks/mask-rr.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
 .mask-rr-invert {
   -webkit-mask-image: url(img/masks/mask-rr-invert.svg);
   mask-image: url(img/masks/mask-rr-invert.svg);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;  
-}
-.mask-p {
-  -webkit-mask-image: url(img/masks/mask-poly.svg);
-  mask-image: url(img/masks/mask-poly.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
@@ -381,6 +431,10 @@ ul,li {
   gap: 1.25em;
   margin-top: 4em;
   grid-auto-rows: minmax(min-content, max-content);
+}
+
+.card.col-2 {
+  gap:4em;
 }
 
 .col-1 {
@@ -495,9 +549,8 @@ footer {
 }
 
 @media screen and (min-width: 1600px) {
-  .content {
-    margin: 4em 1em;
-  }
+  .content {    margin: 4em 1em;}
+  span.h1 {  font-size: 6.5em;}
 }
 @media screen and (max-width: 991px) {
   .content {margin: 2em 2em;}
@@ -505,6 +558,7 @@ footer {
   .col-2-desc {gap: 3em;}
   .about-parent {flex-direction: column; align-items: center;}
   .sidebar {text-align: center;}
+  span.h1 {  font-size: 4em;}
 }
 @media screen and (max-width: 767px) {
   .content {margin: 2em 1em;}
@@ -513,7 +567,7 @@ footer {
   .nav {justify-content: center;}
   .nav-logo {padding-right: .5em;}
   .nav-align {align-items: center;}
-  .theme-switch, .slider {transform: scale(0.9);}
+  /*.theme-switch, .slider {transform: scale(0.9);}*/
   .margin-left {margin: 1.5em;}
   .margin-tight {margin: 5em 0;}
   .margin-right {margin: 0 1em;}
@@ -537,6 +591,7 @@ footer {
 }</style>
 </head>
 <body>
+
   <div class="content">
 
     <nav class="nav">
@@ -544,63 +599,64 @@ footer {
 <div class="nav-align">
     <a class="nav-logo"  class="active" href="/"><dfn data-info="Not Jira.">Gira.</dfn></a>
     <a class="nav-link-item margin-left"  class="active" href="/">Work</a>
-    <a class="nav-link-item margin-left" target="_blank" rel="noopener noreferrer"  class="active" href="https://www.facebook.com/sparkarhub/portfolios/ig/gooweee/" >AR Filters</a>
     <a class="nav-link-item margin-left"   href="../about">About</a>
   </div>
-<div class="nav-align"><label class="theme-switch" for="checkbox" aria-label="Dark Mode" title="Dark Mode">
+ <div class="nav-align">🖤<!--logo and link <label class="theme-switch" for="checkbox" aria-label="Dark Mode" title="Dark Mode">
   <input type="checkbox" id="checkbox">
   <span class="slider round"></span>
-    </label></div>
+    </label>s--></div>
 
 </nav>
 
 
 			<!--INTRO-->
     <header class="margin-med align-center">
-        <h1><span><div id="introPhrase">&nbsp;</div></span></h1>
-        <p><span>Visual / Digital / Branding</span></p>
+        <!--INTRO<h1><span><div id="introPhrase">&nbsp;</div></span></h1>
+        <p><span>Visual / Digital / Branding</span></p>-->
+        <div class="glitch">
+            <div class="text">
+                <span class="h1">✴ Gra𝖕hic De𝖘ign ✴</span>
+            </div> 
+        </div>
     </header>
 
 <!--MAIN GRID-->
-<main class="card col-3">
-    <div class="card-image mask-rr"><a href="/#/">
-            <img src="../../img/card_spotify.jpg" class="image" loading="lazy" alt="Spotify, page under construction"/>
-            </a>
-    </div>
-    <div class="card-image mask-sc"><a href="/motion/">
-        <video autoplay loop muted playsinline src="../../img/card_motion.mp4" class="image" alt="Motion Design"></video>
+<main class="card col-2">
+    <div class="card-image mask-rr"><a href="/a-little-late/">
+        <img src="../../img/card_lilly.jpg" class="image" width="800" height="450" alt="A Little Late with Lilly Singh"/>
         </a>
     </div>
-    <div class="card-image mask-rr-invert"><a href="/a-little-late-2/">
-        <video autoplay loop muted playsinline src="../../img/card_lilly2.mp4" class="image" alt="A Little Late with Lilly Singh digital identity season 2"></video>
+    <div class="card-image mask-sc"><a href="/play/">
+        <video autoplay loop muted playsinline src="../../img/card_misc.mp4" class="image" alt="Experiments with motion and illustration"></video>
         </a>
     </div>
-    <div class="card-image mask-p"><a href="/nbc-parody-art/">
-        <img src="../../img/card_parodyart.jpg" class="image" loading="lazy" alt="NBC Parody Art"/>
+    <div class="card-image mask-left-sc"><a href="/ar/">
+        <video autoplay loop muted playsinline src="../../img/card_ar.mp4" class="image" alt="Augmented reality lenses for Instagram"></video>
         </a>
     </div>
-    <div class="card-image"><a href="/snl/">
-        <video autoplay loop muted playsinline src="../../img/card_snl.mp4" class="image" alt="Saturday Night Live social graphics"></video>
+    <div class="card-image mask-rr-invert"><a href="/nbc-parody-art/">
+        <img src="../../img/card_parody.jpg" class="image" width="800" height="450" loading="lazy" alt="NBC Parody Art"/>
         </a>
     </div>
-    <div class="card-image mask-p"><a href="/illustration/">
-        <img src="../../img/card_illustration.jpg" class="image" loading="lazy" alt="Illustration"/>
+    <div class="card-image mask-sc"><a href="/3D/">
+        <img src="../../img/card_3d.jpg" class="image" width="800" height="450" loading="lazy" alt="3D Experiments" />
         </a>
     </div>
-    <div class="card-image mask-rr"><a href="/3D/">
-        <img src="../../img/card_3d.jpg" class="image" loading="lazy" alt="3D Experiments" />
+    <div class="card-image mask-right-sc"><a href="/snl/">
+        <video autoplay loop muted playsinline src="../../img/card_snl.mp4" class="image" alt="Saturday Night Live social graphics and art direction"></video>
         </a>
     </div>
-    <div class="card-image mask-sc-invert"><a href="/late-night/">
-        <img src="../../img/card_lnsm.jpg" class="image" loading="lazy" alt="Late Night with Seth Meyers digital identity 2020"/>
+    <div class="card-image mask-rr"><a href="/late-night/">
+        <img src="../../img/card_lnsm.jpg" class="image" width="800" height="450" loading="lazy" alt="Late Night with Seth Meyers digital identity 2020"/>
         </a>
     </div>
     <div class="card-image mask-rr-invert"><a href="/stories/">
-        <img src="../../img/card_stories.jpg" class="image" loading="lazy" alt="NBC Instagram Stories"/>
+        <img src="../../img/card_stories.jpg" class="image" width="800" height="450" loading="lazy" alt="NBC Instagram Stories"/>
         </a>
     </div>
 </main>
 <div class="spacer"></div>
+
 
     <!--FOOTER-->  
 <footer class="nav">
@@ -614,12 +670,14 @@ footer {
 </footer>
 
     </div>
+<script>//glitch
+let originalDiv = document.querySelector(".glitch .text span");
 
-<script>//random phrase intro
-var introPhrase = ['Design, am I right?', 'Fonts, am I right?', 'Digital, am I right?', 'Grids, am I right?']
-window.onload = function() {
-  document.getElementById('introPhrase').innerHTML = introPhrase[Math.floor(Math.random() * introPhrase.length)]
-}</script>
+for (let i = 0; i <3; i++) {
+  let clonedDiv = originalDiv.cloneNode(true); 
+document.querySelector(".glitch .text").prepend(clonedDiv);
+}
+</script>
 <script>const animatedTags = document.querySelectorAll("h1, p span, .card, div.item img, div.item video")
 
 //fade out on load
@@ -653,38 +711,9 @@ document.addEventListener("scroll", function() {
 //on browser resize, run fadein
 window.addEventListener("resize",function() {
   fadeIn()
-})</script>
-<script>//dark mode toggle
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]')
+})
 
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'light')
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark')
-  }
-}
+</script>
 
-toggleSwitch.addEventListener('change', switchTheme, false)
-
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'light')
-    localStorage.setItem('theme', 'light') //add this
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    localStorage.setItem('theme', 'dark') //add this
-  }
-}
-
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null
-
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme)
-
-  if (currentTheme === 'light') {
-    toggleSwitch.checked = true
-  }
-}</script>
   </body>
 </html>
