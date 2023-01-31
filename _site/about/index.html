@@ -137,7 +137,7 @@ span.h1 {
 }
 
 .h1,h1 {
-  font-size: 2.5em;
+  font-size: 2.5vw;
 }
 .h2,h2 {
   font-size: 1.25em;
@@ -413,46 +413,34 @@ ul,li {
     padding-left: 0;
 }
 
-.col-4 {
+.col-1,.col-2,.col-3,.col-4 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 1.25em;
+  grid-auto-rows: minmax(min-content, max-content);
 }
+main>.col-1 {margin-top: 4em;}
 
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
 .col-3 {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3em;
-  margin-top: 4em;
 }
 .col-2 {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25em;
-  margin-top: 4em;
-  grid-auto-rows: minmax(min-content, max-content);
+}
+.col-1 {
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .card.col-2 {
   gap:4em;
 }
-
-.col-1 {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1.25em;
-  margin-top: 4em;
-}
-
 .col-2-desc {
   display: grid;
   grid-template-columns: repeat(1,2fr 1fr);
   gap: 8em;
   padding: 1em 2em;
-  /* border-radius: 3px;
-  border: 2px solid;
-  border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
-  border-image-slice: 1;*/
 }
 
 .gradient-box {
@@ -554,7 +542,6 @@ footer {
 }
 @media screen and (max-width: 991px) {
   .content {margin: 2em 2em;}
-  .col-1,.col-2,.col-3 {margin-top: 2em;}
   .col-2-desc {gap: 3em;}
   .about-parent {flex-direction: column; align-items: center;}
   .sidebar {text-align: center;}
@@ -563,7 +550,6 @@ footer {
 @media screen and (max-width: 767px) {
   .content {margin: 2em 1em;}
   .col-3,.col-4 {grid-template-columns: repeat(1, 1fr);}
-  main.col-4 {grid-template-columns: repeat(2, 1fr); gap: .5em;}
   .nav {justify-content: center;}
   .nav-logo {padding-right: .5em;}
   .nav-align {align-items: center;}
@@ -571,6 +557,7 @@ footer {
   .margin-left {margin: 1.5em;}
   .margin-tight {margin: 5em 0;}
   .margin-right {margin: 0 1em;}
+  h1,.nav-logo {font-size: 1.36em;}
   h1 span,p span,a h2 {text-align: center;display: block;}
   .about-parent {flex-direction: column;}
 }
@@ -578,7 +565,7 @@ footer {
   .col-2,.col-3,.col-2-desc {grid-template-columns: repeat(1, 1fr);}
   .col-2-desc {gap: 1em;}
   h1 span {font-size: 1.15em; line-height: 1.5;}
-  h1,.nav-logo {font-size: 1.6em;}
+  h1,.nav-logo {font-size: 1.36em;}
   h2 {font-size: 1em;}   
 }
 
@@ -586,7 +573,6 @@ footer {
   .content {margin: 2em .5em;}
   .nav-logo {padding-right: .3em;}
   .margin-left, .margin-right {margin: 1em;}
-  main.col-4 {grid-template-columns: repeat(1, 1fr);} 
   p.nav-align {text-align: center;}
 }</style>
 </head>
@@ -616,7 +602,7 @@ footer {
         <div class="gradient-box">
         <p style="display:inline;">[ geer-ah ]  <a href="javascript:playSound('pronounciation');"> <img src="../img/pronounciation.svg" style="width: 20px;margin-bottom: -5px;" alt="name pronounciation" /></a><audio id="pronounciation"  src="../img/pronounciation.mp3" preload="auto"></audio>  &bull; she/her</p>
         <div class="tooltip">
-            <h1>Graphic design, art direction, and concepting is my jam. Currently working as a designer at Spotify.</h1><span class="tooltiptext">Authenticity matters a lot to me. I just like to make cool shit with passionate people. I don't take myself too seriously and am constantly playing with new tools.</span>
+            <h1>art direction 👁 design 🎨 and some other things 🌀 Currently working as a designer at Spotify.</h1><span class="tooltiptext">Authenticity matters a lot to me. I just like to make cool shit with passionate people. I don't take myself too seriously and am constantly playing with new tools.</span>
         </div><hr>
         <div class="margin-top"><h2>Other Interests</h2>
             <p>Open-world video games, birds, spooky things, synth pop, sci-fi, and front-end development. Big fan of scouring Reddit threads after watching a good show or movie 🤓 Unfortunately, very active on <a href="https://twitter.com/gooweee" onclick="window.open(this.href); return false;">that bird app</a>, mostly to talk about birds.</p></div></div>
