@@ -443,9 +443,9 @@ main>.col-1 {margin-top: 4em;}
 }
 
 .gradient-box {
-  padding: 2em 2.5em;
+  padding: 2em 4em 2em 2em;
   margin-bottom: 1em;
-  border: 1px solid;
+  border-right: 1px solid;
   border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
   border-image-slice: 1;
 }
@@ -482,12 +482,13 @@ main>.col-1 {margin-top: 4em;}
 .about-pic {
   display: inline-block;
   border-radius: 3px;
-  height: 500px;
-  content: url(../img/me.jpg);
+  padding: 2em;
+  height: 450px;
+  content: url(../img/me.png);
 }
 
 .about-pic:hover {
-  content: url(../img/me2.jpg);
+  content: url(../img/me2.png);
 }
 
 .about-pic:hover + div {
@@ -544,6 +545,7 @@ footer {
   .col-2-desc {gap: 3em;}
   .about-parent {flex-direction: column; align-items: center;}
   .sidebar {text-align: center;}
+  .gradient-box {border-right: none;}
   span.h1 {  font-size: 4em;}
 }
 @media screen and (max-width: 767px) {
@@ -599,12 +601,12 @@ footer {
 <main class="about-parent">
     <div class="col about">
         <div class="gradient-box">
-        <p style="display:inline;">[ geer-ah ]  <a href="javascript:playSound('pronounciation');"> <img src="../img/pronounciation.svg" style="width: 20px;margin-bottom: -5px;" alt="name pronounciation" /></a><audio id="pronounciation"  src="../img/pronounciation.mp3" preload="auto"></audio>  &bull; she/her</p>
+        <p style="display:inline;">[ geer-ah ] &nbsp;<a href="javascript:playSound('pronounciation');"> <img src="../img/pronounciation.svg" style="width: 20px;margin-bottom: -5px;" alt="name pronounciation" /></a><audio id="pronounciation"  src="../img/pronounciation.mp3" preload="auto"></audio>&nbsp; &bull; &nbsp;she/her</p>
         <div>
             <h1>I'm a graphic designer 😈👁️❤️‍🔥🫰🏽</h1>
-        </div><hr>
+        </div>
         <div class="margin-top"><h3>Currently</h3>
-            <p>I've got 7+ years of experience in brand design. I work at Spotify as a Creative—it's a blend of design, art direction, and thinking of fun concepts for marketing campaigns. Also open to freelance work related to AR lenses (TikTok and Instagram).</p></div>
+            <p>I've got 7+ years of experience in digital brand design in the entertainment industry. I work at Spotify as a Creative—it's a blend of design, art direction, and thinking of fun concepts for marketing campaigns. Open to freelance work related to AR lenses for TikTok and Instagram.</p></div>
         <div class="margin-top"><h3>Other Interests</h3>
                 <p>Open-world video games, birds, spooky things, synth pop, sci-fi, and front-end development. Big fan of scouring Reddit threads after watching a good show or movie 🤓 Unfortunately, very active on <a href="https://twitter.com/gooweee" onclick="window.open(this.href); return false;">that bird app</a>, mostly to talk about birds.</p></div>
             </div>
