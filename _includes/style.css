@@ -63,6 +63,7 @@ body {
   line-height: 1.6;
   background-color: var(--bg-color);
 }
+  
 .content {
   margin: 4em 8em;
   position: relative;
@@ -328,40 +329,39 @@ dfn::before {
   height: auto;
   -o-object-fit: fill;
   object-fit: fill;
-  border-radius: 3px;
 }
 
 a > h3 {color: var(--magenta);}
 a:hover > h3 {color: var(--blue);}
 
 /*MASKS*/
-.mask-sc {
-  -webkit-mask-image: url(img/masks/mask-sc.svg);
-  mask-image: url(img/masks/mask-sc.svg);
+.mask-1 {
+  -webkit-mask-image: url(img/masks/mask-1.svg);
+  mask-image: url(img/masks/mask-1.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
-.mask-left-sc {
-  -webkit-mask-image: url(img/masks/mask-left-sc.svg);
-  mask-image: url(img/masks/mask-left-sc.svg);
+.mask-2 {
+  -webkit-mask-image: url(img/masks/mask-2.svg);
+  mask-image: url(img/masks/mask-2.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
-.mask-right-sc {
-  -webkit-mask-image: url(img/masks/mask-right-sc.svg);
-  mask-image: url(img/masks/mask-right-sc.svg);
+.mask-3 {
+  -webkit-mask-image: url(img/masks/mask-3.svg);
+  mask-image: url(img/masks/mask-3.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
-.mask-rr {
-  -webkit-mask-image: url(img/masks/mask-rr.svg);
-  mask-image: url(img/masks/mask-rr.svg);
+.mask-4 {
+  -webkit-mask-image: url(img/masks/mask-4.svg);
+  mask-image: url(img/masks/mask-4.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
-.mask-rr-invert {
-  -webkit-mask-image: url(img/masks/mask-rr-invert.svg);
-  mask-image: url(img/masks/mask-rr-invert.svg);
+.mask-5 {
+  -webkit-mask-image: url(img/masks/mask-5.svg);
+  mask-image: url(img/masks/mask-5.svg);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;  
 }
