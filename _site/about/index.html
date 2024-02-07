@@ -47,16 +47,6 @@
   --slider-color: #6A7089;
 }
 
-/*[data-theme="light"] {  
-  --magenta: #b446c8;  
-  --blue: #3c55e0;  
-  --heading-color: #0f1012;  
-  --text-color: #202327;
-  --bg-color: #fef4eb;
-  --notjira-color: #B6B6C8;
-  --slider-color: #fff;
-}*/
-
 html {
   min-height: 100%;
   border: 1px solid;
@@ -216,66 +206,6 @@ p {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/*
-.theme-switch {
-  position: relative;
-  display: inline-block;
-  width: 54px;
-  height: 30px;
-}
-
-.theme-switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--notjira-color);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 5px;
-  bottom: 5px;
-  background-color: var(--slider-color);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: var(--notjira-color);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--notjira-color);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(24px);
-  -ms-transform: translateX(24px);
-  transform: translateX(24px);
-}
-
-.slider.round {
-  border-radius: 30px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-*/
 
 dfn {
   font-style: normal;
@@ -417,6 +347,11 @@ ul,li {
   grid-auto-rows: minmax(min-content, max-content);
 }
 main>.col-1 {margin-top: 4em;}
+.col-1-filters {
+  display: grid;
+  column-gap: 1.25em;
+  grid-auto-rows: minmax(min-content, max-content);
+}
 
 .col-4 {
   grid-template-columns: repeat(4, 1fr);
@@ -442,11 +377,11 @@ main>.col-1 {margin-top: 4em;}
 }
 
 .gradient-box {
-  padding: 2em 4em 2em 2em;
+  padding: 2em 12em 2em 2em;
   margin-bottom: 1em;
-  border-right: 1px solid;
+  /*border-right: 1px solid;
   border-image-source: linear-gradient(#E371FB,#016ed3,#0f1012);
-  border-image-slice: 1;
+  border-image-slice: 1;*/
 }
 
 @keyframes fadein {
@@ -454,9 +389,16 @@ main>.col-1 {margin-top: 4em;}
   100% {opacity:  1;}
 }
 
+.icon {
+  padding-right: .25em;
+  height: 25px;
+  filter: invert();
+}
+
 .about-parent {
   display: flex;
   margin: auto -1rem 1rem;
+  align-items: center;
 }
 
 .col {
@@ -478,26 +420,20 @@ main>.col-1 {margin-top: 4em;}
   margin: -7em 5em 0;
 }
 
-.about-pic {
-  display: inline-block;
-  border-radius: 3px;
-  padding: 2em;
-  height: 450px;
-  content: url(../img/me.png);
+#rotatingImage {
+  width: 100%;
+  /*border: 2px solid #ddd;  Add a border for better visibility */
+  border-radius: 50%; /* Make it circular */
+  animation: rotate 6s linear infinite; /* Rotate animation */
 }
 
-.about-pic:hover {
-  content: url(../img/me2.png);
-}
-
-.about-pic:hover + div {
-  opacity: 1;
-}
-
-.lol {
-  text-align: center;
-  position:relative;
-  color: #fef4eb;
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 footer {
@@ -546,6 +482,7 @@ footer {
   .sidebar {text-align: center;}
   .gradient-box {border-right: none; padding: 2em;}
   span.h1 {  font-size: 4em;}
+  #rotatingImage {width: 75%;}
 }
 @media screen and (max-width: 767px) {
   .content {margin: 2em 1em;}
@@ -557,7 +494,7 @@ footer {
   .margin-left {margin: 1.5em;}
   .margin-tight {margin: 5em 0;}
   .margin-right {margin: 0 1em;}
-  h1,.nav-logo {font-size: 1.36em;}
+  h1,.nav-logo {font-size: 1.8em;}
   h1 span,p span,a h2 {text-align: center;display: block;}
   .about-parent {flex-direction: column;text-align: center;}
 }
@@ -565,7 +502,7 @@ footer {
   .col-2,.col-3,.col-2-desc {grid-template-columns: repeat(1, 1fr);}
   .col-2-desc {gap: 1em;}
   h1 span {font-size: 1.15em; line-height: 1.5;}
-  h1,.nav-logo {font-size: 1.36em;}
+  h1,.nav-logo {font-size: 1.8em;}
   h2 {font-size: 1em;}   
 }
 
@@ -602,16 +539,13 @@ footer {
             <h1>I'm a graphic designer 🔥😈🔥</h1>
         </div>
         <div class="margin-top"><h3>Currently</h3>
-            <p>I've got 7+ years of experience in digital brand design in the entertainment industry. I work at Spotify as a Creative—it's a blend of design, art direction, and thinking of fun concepts for marketing campaigns. Open to freelance work related to AR lenses for TikTok and Instagram.</p></div>
+            <p>7+ years of experience in digital brand design in the entertainment industry. I work at Spotify as a Creative—it's a blend of design, art direction, and thinking of fun concepts for marketing campaigns. Open for freelance social AR lenses projects.</p></div>
         <div class="margin-top"><h3>Other Interests</h3>
                 <p>Open-world video games, birds, spooky things, synth pop, sci-fi, and front-end development. Big fan of scouring Reddit threads after watching a good show or movie 🤓 Unfortunately, very active on <a href="https://twitter.com/gooweee" onclick="window.open(this.href); return false;">that bird app</a>, mostly to talk about birds.</p><p>I'm mad about the fall of Twitter, so I'm going to keep that bird line for another year.</p></div>
             </div>
     </div>
     <div class="col sidebar">
-        <div class="about-pic" alt="me"></div>
-        <div class="overlay">
-            <p class="lol">pink tube light + laptop + lots of photoshop 🤪</p>
-        </div>
+        <img id="rotatingImage" src="../../img/me-dizzy.jpg">
     </div>
 </main>
 
