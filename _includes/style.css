@@ -135,17 +135,36 @@ p {
 }
 
 .glitch .text{
-  position:relative;
+  position: relative;
 	padding:0;
 	margin:0;
+  width: 100%;
+  text-align: center;
 }
 
-.glitch span{
+.glitch .glitch-title {
+  position: relative;
+  width: 100%;
+}
+
+.glitch .glitch-title > .h1 {
+  display: block;
+  width: 100%;
+}
+
+.glitch .glitch-title > .h1:not(.glitch-layer) {
+  position: relative;
+  z-index: 1;
+}
+
+.glitch .glitch-title > .glitch-layer {
   position: absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	width:100vw;
+  top: 0;
+  left: 0;
+}
+
+.glitch .text h2 {
+  margin: .2em 0 0;
 }
 
 .glitch span:nth-child(2){

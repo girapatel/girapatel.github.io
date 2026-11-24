@@ -152,17 +152,36 @@ p {
 }
 
 .glitch .text{
-  position:relative;
+  position: relative;
 	padding:0;
 	margin:0;
+  width: 100%;
+  text-align: center;
 }
 
-.glitch span{
+.glitch .glitch-title {
+  position: relative;
+  width: 100%;
+}
+
+.glitch .glitch-title > .h1 {
+  display: block;
+  width: 100%;
+}
+
+.glitch .glitch-title > .h1:not(.glitch-layer) {
+  position: relative;
+  z-index: 1;
+}
+
+.glitch .glitch-title > .glitch-layer {
   position: absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	width:100vw;
+  top: 0;
+  left: 0;
+}
+
+.glitch .text h2 {
+  margin: .2em 0 0;
 }
 
 .glitch span:nth-child(2){
@@ -576,8 +595,7 @@ footer {
 <div class="h3 nav-align">
     <a href="https://www.linkedin.com/in/girapatel2" class="margin-right" onclick="window.open(this.href); return false;">Linkedin</a>
     <a href="https://vimeo.com/girapatel" class="margin-right" onclick="window.open(this.href); return false;">Vimeo</a>
-    <a href="https://dribbble.com/girapatel" class="margin-right" onclick="window.open(this.href); return false;">Dribbble</a>
-    <a href="https://open.spotify.com/user/1240949043?si=7kL2K3iKSvmDbI_B1DU4mA" class="margin-right" onclick="window.open(this.href); return false;">Spotify</a>
+    <a href="https://open.spotify.com/playlist/0DMmwdO5IdjFwdaqACohIa?si=f38dd2c1d2f64409" class="margin-right" onclick="window.open(this.href); return false;">Spotify</a>
     </div>
     <p class="h3 nav-align">Made with my 🐻 hands &copy; Gira Patel 2026 </p>
 </footer>
