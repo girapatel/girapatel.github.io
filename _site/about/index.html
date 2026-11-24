@@ -152,17 +152,36 @@ p {
 }
 
 .glitch .text{
-  position:relative;
+  position: relative;
 	padding:0;
 	margin:0;
+  width: 100%;
+  text-align: center;
 }
 
-.glitch span{
+.glitch .glitch-title {
+  position: relative;
+  width: 100%;
+}
+
+.glitch .glitch-title > .h1 {
+  display: block;
+  width: 100%;
+}
+
+.glitch .glitch-title > .h1:not(.glitch-layer) {
+  position: relative;
+  z-index: 1;
+}
+
+.glitch .glitch-title > .glitch-layer {
   position: absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	width:100vw;
+  top: 0;
+  left: 0;
+}
+
+.glitch .text h2 {
+  margin: .2em 0 0;
 }
 
 .glitch span:nth-child(2){
@@ -535,12 +554,13 @@ footer {
         <div class="gradient-box">
         <p style="display:inline;">[ geer-ah ] &nbsp;<a href="javascript:playSound('pronounciation');"> <img src="../img/pronounciation.svg" style="width: 20px;margin-bottom: -5px;" alt="name pronounciation" /></a><audio id="pronounciation"  src="../img/pronounciation.mp3" preload="auto"></audio>&nbsp; &bull; &nbsp;she/her</p>
         <div>
-            <h1>I'm a graphic designer 😈</h1>
+            <h1>I get sh*t done 😈</h1>
         </div>
         <div class="margin-top"><h3>Currently</h3>
-            <p>I have 8+ years of experience in digital brand design in the entertainment industry. I work at Spotify as a Creative where I do a blend of design, art direction, and concepting for marketing campaigns. I'm particularly well-versed in being an internet goblin.</p></div>
+            <p>10+ years of experience in the entertainment industry, working across creative direction, art direction, and design. I work at Spotify as an Associate Creative Director, where I develop creative concepts for marketing campaigns and experiences. I'm also particularly well-versed in being an internet goblin.
+</p></div>
         <div class="margin-top"><h3>Other Interests</h3>
-                <p>Open-world video games, birds, spooky things, synth pop, sci-fi, and front-end development. Big fan of scouring Reddit threads after watching a good show or movie 🤓<p>Lefty, INFJ, Pisces—all very legitimate certifications to prove I am artsy fartsy.</p></div>
+                <p>Open-world video games, birds, spooky things, hyperpop, and solo travel. Big fan of scouring Reddit threads after watching a good show or movie 🤓<p>Lefty, INFJ, Pisces—all very legitimate certifications to prove I am artsy fartsy.</p></div>
             </div>
     </div>
     <div class="col sidebar">
@@ -563,8 +583,7 @@ footer {
 <div class="h3 nav-align">
     <a href="https://www.linkedin.com/in/girapatel2" class="margin-right" onclick="window.open(this.href); return false;">Linkedin</a>
     <a href="https://vimeo.com/girapatel" class="margin-right" onclick="window.open(this.href); return false;">Vimeo</a>
-    <a href="https://dribbble.com/girapatel" class="margin-right" onclick="window.open(this.href); return false;">Dribbble</a>
-    <a href="https://open.spotify.com/user/1240949043?si=7kL2K3iKSvmDbI_B1DU4mA" class="margin-right" onclick="window.open(this.href); return false;">Spotify</a>
+    <a href="https://open.spotify.com/playlist/0DMmwdO5IdjFwdaqACohIa?si=f38dd2c1d2f64409" class="margin-right" onclick="window.open(this.href); return false;">Spotify</a>
     </div>
     <p class="h3 nav-align">Made with my 🐻 hands &copy; Gira Patel 2026 </p>
 </footer>
